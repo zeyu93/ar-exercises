@@ -8,5 +8,11 @@ require_relative './exercise_6'
 
 puts "Exercise 7"
 puts "----------"
+puts "please choos a Store Name to test for validation"
 
+storename = gets.chomp
 # Your code goes here ...
+puts Store.create!(name: storename,
+  annual_revenue: 300000,
+  mens_apparel: true,
+  womens_apparel: true).valid?
